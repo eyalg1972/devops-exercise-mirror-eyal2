@@ -1,0 +1,18 @@
+---
+- name: copy img-panda app
+  copy: src=img-panda dest=/tmp/ owner=root group=root mode=0755
+
+- name: npm install
+  npm: path=/tmp/img-panda
+
+- name: Stop APP
+  command: pm2 stop img-panda
+  args:
+    chdir: /tmp/img-panda
+  ignore_errors: yes
+
+    
+- name: Start APP
+  command: pm2 start img-panda.js --name img-panda
+  args:
+    chdir: /tmp/img-panda

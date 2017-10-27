@@ -1,0 +1,9 @@
+{
+  "name": "img-panda_app",
+  "version": "1.0.0",
+  "description": "I can haz bamboo!",
+  "main": "img-panda.js",
+  "dependencies": {
+    "httpdispatcher": "^1.0.0"
+  }
+}

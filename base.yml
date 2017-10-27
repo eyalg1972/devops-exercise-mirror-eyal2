@@ -7,8 +7,9 @@
       hostname: name={{inventory_hostname}}
 
 - name: Base bamboo service
-  hosts: base
+  hosts: myd-vm06383.hpeswlab.net
   become: yes
   roles:
-    - { role: nodejs, tags: nodejs }
-    - { role: bamboo, tags: bamboo }
+    - { role: img-panda, tags: img-panda }
+    - { role: smart-panda, tags: smart-panda }
+    
